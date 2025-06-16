@@ -26,7 +26,7 @@ bool encrypt_file(
     const std::filesystem::path& input_path,
     const std::filesystem::path& output_path,
     const std::array<unsigned char, 32>& key
-);
+) noexcept;
 
 // Read binary file
 std::vector<unsigned char> read_file(const std::filesystem::path& path);

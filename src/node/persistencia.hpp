@@ -8,4 +8,3 @@ void guardarIdentidad(const identidad& id);
 bool cargarIdentidad(identidad& id);
 
 #endif // PERSISTENCIA_HPP
-;

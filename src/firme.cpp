@@ -1,4 +1,5 @@
 #include <iostream>
+#include "node/firma.hpp"
 #include <fstream>
 #include <vector>
 #include <string>
@@ -47,8 +48,15 @@ bool firmarArchivo(
         
         firma.resize(firmaLen);
 
+    if(firmaLen !=0){
+        
         std::cout << "Firma generada con éxito. Tamaño: " << firma.size() << " bytes.\n";
         return true;
+
+        } else{
+            std::cerr << "La firma generada no ha sido exitosa: \n";
+            return false;
+        }
 
     } catch (const std::exception& e) {
         std::cerr << "Excepción: " << e.what() << "\n";
